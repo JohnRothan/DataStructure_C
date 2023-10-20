@@ -95,17 +95,15 @@ int main(){
     printf("顺序表的元素：\n");
     DisplayTable(t);
     printf("删除元素3：\n")；
-    DelTable(&t,3)
+    DelTable(&t,3);
     DisplayTable(t);
     printf("在第四个位置插入10：\n");
     InsertTable(&t,10,4);
     DisplayTable(t);
-    printf("查找元素4的位置：\n");
-    SelectElem(t,4);
-    DisplayTable(t);
+    printf("查找元素4的位置：%d\n",SelectTable(t,4));
     printf("将元素10改为20：\n");
     EditTable(&t,10,20);
     DisplayTable(t);
-    free(t->head);
+    free(t.head);
     return 0;
 }
